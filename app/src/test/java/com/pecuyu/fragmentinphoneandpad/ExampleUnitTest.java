@@ -1,4 +1,4 @@
-package com.pecuyu.fragmentinphinoandpad;
+package com.pecuyu.fragmentinphoneandpad;
 
 import org.junit.Test;
 

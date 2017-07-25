@@ -1,4 +1,4 @@
-package com.pecuyu.fragmentinphinoandpad;
+package com.pecuyu.fragmentinphoneandpad;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

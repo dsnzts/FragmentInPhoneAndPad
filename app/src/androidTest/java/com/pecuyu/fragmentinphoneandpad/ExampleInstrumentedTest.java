@@ -1,4 +1,4 @@
-package com.pecuyu.fragmentinphinoandpad;
+package com.pecuyu.fragmentinphoneandpad;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
