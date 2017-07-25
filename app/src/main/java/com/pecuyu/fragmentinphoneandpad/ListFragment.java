@@ -4,11 +4,12 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.pecuyu.fragmentinphinoandpad.R;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,17 +20,30 @@ import com.pecuyu.fragmentinphinoandpad.R;
 public class ListFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
+    private static List<Info> mList;
 
     public ListFragment() {
         // Required empty public constructor
     }
 
+    public static void setList(List<Info> mList) {
+        ListFragment.mList = mList;
+    }
+
+    public static ListFragment newInstance(List<Info> list) {
+        ListFragment fragment = new ListFragment();
+        fragment.setList(list);
+        return fragment;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_list, container, false);
+        View view = inflater.inflate(R.layout.fragment_list, container, false);
+        RecyclerView rv = (RecyclerView) view.findViewById(R.id.id_list_fragment_recycler);
+        rv.setAdapter(new MyRecyclerViewAdapter(mList, getActivity()));
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
