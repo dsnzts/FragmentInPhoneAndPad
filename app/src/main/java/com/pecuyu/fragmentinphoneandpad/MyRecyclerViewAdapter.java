@@ -30,7 +30,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.tvId.setText(mList.get(position).getId());
+        holder.tvId.setText("id:"+mList.get(position).getId());
     }
 
     @Override
