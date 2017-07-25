@@ -1,0 +1,2 @@
+# FragmentInPhinoAndPad
+Fragment适配手机和平板
